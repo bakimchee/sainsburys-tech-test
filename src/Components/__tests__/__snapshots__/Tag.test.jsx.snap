@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tag 1`] = `
+<span
+  className="Tag-sc-14cv7o2-0 lbMyPj"
+>
+  Add to basket
+</span>
+`;

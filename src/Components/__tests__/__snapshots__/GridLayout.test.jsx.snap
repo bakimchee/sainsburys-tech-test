@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GridLayout 1`] = `
+<div
+  className="GridLayout__GridWrapper-p06ppo-0 khLoDS"
+  id="main"
+>
+  <div
+    className="GridLayout__Grid-p06ppo-1 gBdhdK"
+  >
+    Add to basket
+  </div>
+</div>
+`;

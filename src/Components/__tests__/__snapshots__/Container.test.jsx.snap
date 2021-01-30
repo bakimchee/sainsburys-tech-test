@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Container 1`] = `
+<div
+  className="Container-u58elu-0 ixyjYR"
+>
+  Add to basket
+</div>
+`;

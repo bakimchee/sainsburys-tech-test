@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SkipLink 1`] = `
+<a
+  className="SkipLink__SkipLinkStyle-sc-1mjp9rk-0 fijpFE"
+  href="#main"
+>
+  Skip to main content
+</a>
+`;
