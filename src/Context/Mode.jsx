@@ -1,7 +1,8 @@
 import React, { createContext, useState } from 'react';
+import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
 
-import { theme, mode } from '../Theme';
+import { mode } from '../Theme';
 
 export const ModeContext = createContext();
 
@@ -10,9 +11,7 @@ export const ModeContextProvider = ({ children }) => {
   const activeTheme = mode[themeMode];
 
   const toggleTheme = () => {
-    setThemeMode((prevState) => {
-      return prevState === 'light' ? 'dark' : 'light';
-    });
+    setThemeMode((prevState) => (prevState === 'light' ? 'dark' : 'light'));
   };
 
   const value = { toggleTheme, themeMode };
@@ -22,4 +21,8 @@ export const ModeContextProvider = ({ children }) => {
       <ThemeProvider theme={activeTheme}>{children}</ThemeProvider>
     </ModeContext.Provider>
   );
+};
+
+ModeContextProvider.propTypes = {
+  children: PropTypes.node.isRequired,
 };

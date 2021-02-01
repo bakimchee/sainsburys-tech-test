@@ -38,6 +38,7 @@ dd {
 /* Set HTML/Type defaults */
 html {
   font-size: ${staticTheme.typography.fontSize.default};
+  color: ${({ theme }) => theme.text}
   @media (max-width: ${staticTheme.breakpoints.small.max}) {
     font-size:  ${staticTheme.typography.fontSize.small}; 
   }

@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import { hot } from 'react-hot-loader/root';
 
 import { CheckoutContextProvider } from './Context/Checkout';
-import { ModeContext, ModeContextProvider } from './Context/Mode';
+import { ModeContextProvider } from './Context/Mode';
 import { SidebarContextProvider } from './Context/Sidebar';
 
 import ProductCard from './Components/ProductCard';
@@ -9,21 +10,28 @@ import Container from './Components/Container';
 import Header from './Components/Header';
 import GridLayout from './Components/GridLayout';
 import SkipLink from './Components/SkipLink';
-
-import Footer from './Components/Footer';
+import Checkout from './Components/Checkout';
 
 import GlobalStyles from './Styles/GlobalStyles';
 
-import { hot } from 'react-hot-loader/root';
-
-const fetchURL = 'https://jsainsburyplc.github.io/front-end-test/products.json';
+import getData from './Utils/GetData';
 
 function App() {
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState('');
   const [data, setData] = useState(null);
-  const getData = () => fetch(fetchURL).then((res) => res.json());
 
   useEffect(() => {
-    getData().then((data) => setData(data));
+    setLoading(true);
+    getData()
+      .then((res) => {
+        setLoading(false);
+        setData(res);
+      })
+      .catch(() => {
+        setLoading(false);
+        setError('Failed to retrieve data');
+      });
   }, []);
 
   return (
@@ -34,15 +42,16 @@ function App() {
             <GlobalStyles />
             <SkipLink />
             <Container>
-              <Header></Header>
-
+              <Header />
               <GridLayout id="main">
-                {data?.map((item) => (
-                  <ProductCard equalHeight={true} product={item} key={item.sku} />
-                ))}
+                {error && <div>{error}</div>}
+                {loading && !error && <div>loading...</div>}
+                {data &&
+                  !error &&
+                  data.map((item) => <ProductCard equalHeight product={item} key={item.sku} />)}
               </GridLayout>
             </Container>
-            <Footer />
+            <Checkout />
           </SidebarContextProvider>
         </CheckoutContextProvider>
       </ModeContextProvider>

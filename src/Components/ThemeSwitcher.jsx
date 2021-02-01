@@ -7,9 +7,10 @@ const ThemeSwitcher = () => {
   const handleThemeChange = () => {
     toggleTheme();
   };
+  const themeColor = themeMode === 'light' ? 'dark' : 'light';
   return (
     <TransparentButton onClick={handleThemeChange} type="button" transparent>
-      Toggle {themeMode === 'light' ? 'dark' : 'light'} mode
+      {`Toggle ${themeColor} mode`}
     </TransparentButton>
   );
 };

@@ -1,4 +1,5 @@
 import React, { useState, useContext } from 'react';
+import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
 
 import styled from 'styled-components';
@@ -11,8 +12,13 @@ const Card = styled.div`
   background-color: ${({ theme }) => theme.foreground};
   border-radius: ${staticTheme.border.radius.default};
   padding: ${staticTheme.size.spacing.large};
+  margin-bottom: 0.5rem;
   display: flex;
   flex-direction: column;
+  color: ${({ theme }) => theme.text};
+  @media (min-width: ${staticTheme.breakpoints.medium.min}) {
+    margin-bottom: 0;
+  }
   .card--body {
     flex-grow: 1;
     display: flex;
@@ -46,12 +52,10 @@ const Card = styled.div`
 `;
 
 const ProductCard = ({ product }) => {
-  const [state, dispatch] = useContext(CheckoutContext);
-  const [basket, setBasket] = useState();
+  const [, dispatch] = useContext(CheckoutContext);
+  const [, setBasket] = useState();
 
   const handleAddCheckout = () => {
-    const duplicateItem = state.basket.includes(product);
-
     setBasket(product);
 
     dispatch({
@@ -81,6 +85,20 @@ const ProductCard = ({ product }) => {
       </div>
     </Card>
   );
+};
+
+ProductCard.defaultProps = {
+  product: undefined,
+};
+
+ProductCard.propTypes = {
+  product: PropTypes.shape({
+    productId: PropTypes.string,
+    image: PropTypes.string,
+    title: PropTypes.string,
+    price: PropTypes.number,
+    sku: PropTypes.string,
+  }),
 };
 
 export default ProductCard;

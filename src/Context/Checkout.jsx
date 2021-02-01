@@ -1,4 +1,5 @@
 import React, { useReducer, createContext } from 'react';
+import PropTypes from 'prop-types';
 
 export const CheckoutContext = createContext();
 
@@ -26,4 +27,8 @@ export const CheckoutContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initState);
 
   return <CheckoutContext.Provider value={[state, dispatch]}>{children}</CheckoutContext.Provider>;
+};
+
+CheckoutContextProvider.propTypes = {
+  children: PropTypes.node.isRequired,
 };

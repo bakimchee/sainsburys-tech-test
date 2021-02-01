@@ -21,20 +21,23 @@ const Button = styled.button`
     background-color: ${staticTheme.color.palette.orangeDark};
     cursor: pointer;
   }
+  &:focus {
+    outline: 4px dashed ${staticTheme.color.palette.blue};
+  }
   // https://github.com/philipwalton/flexbugs#9-some-html-elements-cant-be-flex-containers
   &:not(button) {
     align-items: center;
     display: inline-flex;
     justify-content: center;
   }
-  ${(props) =>
-    props.fullWidth &&
+  ${({ fullWidth }) =>
+    fullWidth &&
     `
     display: block;
     width: 100%;
   `}
-  ${(props) =>
-    props.outlined &&
+  ${({ outlined }) =>
+    outlined &&
     `
     background-color: transparent;
     border: solid ${staticTheme.border.width.large} ${staticTheme.color.palette.orange};
@@ -44,8 +47,8 @@ const Button = styled.button`
       background-color: ${staticTheme.color.palette.orangeLight};
     }
   `}
-  ${(props) =>
-    props.small &&
+  ${({ small }) =>
+    small &&
     `
     padding: 0.25rem 0.5rem;
     font-size: small;
