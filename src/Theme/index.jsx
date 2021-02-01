@@ -8,7 +8,11 @@ export const theme = {
       max: '767px',
     },
     large: {
-      min: '1023px',
+      min: '768px',
+      max: '1023px',
+    },
+    xlarge: {
+      min: '1024px',
       max: '1279px',
     },
   },

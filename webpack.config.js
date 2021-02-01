@@ -33,7 +33,7 @@ const config = {
     contentBase: './dist',
   },
   plugins: [
-    new HtmlWebpackPlugin({ title: 'Title', template: './src/index.html' }),
+    new HtmlWebpackPlugin({ title: "Sainsbury's - Tech Test", template: './src/index.html' }),
     new MiniCssExtractPlugin(),
     new BundleAnalyzerPlugin({
       analyzerMode: 'static',

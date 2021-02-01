@@ -1,15 +1,13 @@
-import React, { useState, useContext } from 'react';
-import { useSpring, animated } from 'react-spring';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { X } from '@styled-icons/feather';
-import { theme as staticTheme } from '../Theme';
 
 import { CheckoutContext } from '../Context/Checkout';
 import { SidebarContext } from '../Context/Sidebar';
 
-import Button, { IconButton } from './Button';
+import { TransparentButton } from './Button';
 
-const CheckoutContainer = styled(animated.div)`
+const CheckoutContainer = styled.div`
   right: 0;
   top: 0;
   bottom: 0;
@@ -22,13 +20,18 @@ const CheckoutContainer = styled(animated.div)`
 `;
 
 const BasketList = styled.div`
-  .basket-list--item {
-    padding-top: 1rem;
+  .basket-list--price {
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: large;
     font-weight: bold;
+  }
+  .basket-list--body {
+    flex-grow: 1;
+  }
+  .basket-list--item {
+    display: flex;
     margin-bottom: 1rem;
     padding-bottom: 1rem;
     border-bottom: 1px solid ${({ theme }) => theme.borderColor};
@@ -39,19 +42,14 @@ const BasketHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1rem;
   padding-bottom: 1rem;
+  margin-bottom: 1rem;
   border-bottom: 1px solid ${({ theme }) => theme.borderColor};
 `;
 
 const Checkout = () => {
   const [state, dispatch] = useContext(CheckoutContext);
   const { handleSideBar, sideBar } = useContext(SidebarContext);
-
-  const flyOut = useSpring({
-    from: { opacity: 0 },
-    to: { opacity: 1 },
-  });
 
   const delCheckout = (id) => {
     dispatch({
@@ -64,28 +62,27 @@ const Checkout = () => {
 
   return (
     sideBar && (
-      <CheckoutContainer style={{ flyOut }}>
+      <CheckoutContainer>
         <BasketHeader>
           <h3>Your Basket</h3>
-          <Button outlined onClick={() => handleSideBar()}>
+          <TransparentButton onClick={() => handleSideBar()}>
             <X size="28" title="Remove from basket" />
             Close sidebar
-          </Button>
+          </TransparentButton>
         </BasketHeader>
 
         {state.basket.length > 0 ? (
           <BasketList>
             {state.basket.map(({ id, product }) => (
-              <>
-                {product.title}
-                <div className="basket-list--item" key={id}>
-                  {`£${product.price}`}
-                  <IconButton outlined onClick={() => handleCheckoutDelete(id)}>
-                    <X size="28" title="Remove from basket" />
-                    Remove from basket
-                  </IconButton>
+              <div key={id} className="basket-list--item">
+                <div className="basket-list--body">
+                  {product.title}
+                  <span className="basket-list--price">{`£${product.price}`}</span>
                 </div>
-              </>
+                <TransparentButton small onClick={() => handleCheckoutDelete(id)}>
+                  <X size="28" title="Remove from basket" />
+                </TransparentButton>
+              </div>
             ))}
           </BasketList>
         ) : (
