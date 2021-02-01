@@ -1,9 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Tag 1`] = `
+.c0 {
+  background-color: #283044;
+  border-radius: 8px;
+  padding: 0.25rem 0.5rem;
+}
+
 <span
-  className="Tag-sc-14cv7o2-0 lbMyPj"
+  className="c0"
 >
-  Add to basket
+  3
 </span>
 `;

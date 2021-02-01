@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Footer 1`] = `
-<div
-  className="Footer__FooterStyle-sc-1cyxbxn-0 ezdQHY"
->
-  Add to basket
-</div>
-`;

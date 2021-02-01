@@ -1,8 +1,321 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Button 1`] = `
+exports[`Button - Full Width 1`] = `
+.c0 {
+  padding: 0.5rem 1rem;
+  color: white;
+  background: #F06C00;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  touch-action: manipulation;
+  min-height: 48px;
+  min-width: 48px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: block;
+  width: 100%;
+}
+
+.c0:focus,
+.c0:hover {
+  background-color: #E55000;
+  cursor: pointer;
+}
+
+.c0:focus {
+  outline: 4px dashed #283044;
+}
+
+.c0:not(button) {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
 <button
-  className="Button-uinp5t-0 hpjRxf"
+  className="c0"
+>
+  Add to basket
+</button>
+`;
+
+exports[`Button - Outline 1`] = `
+.c0 {
+  padding: 0.5rem 1rem;
+  color: white;
+  background: #F06C00;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  touch-action: manipulation;
+  min-height: 48px;
+  min-width: 48px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: transparent;
+  border: solid 4px #F06C00;
+  color: #F06C00;
+}
+
+.c0:focus,
+.c0:hover {
+  background-color: #E55000;
+  cursor: pointer;
+}
+
+.c0:focus {
+  outline: 4px dashed #283044;
+}
+
+.c0:not(button) {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c0:focus,
+.c0:hover {
+  background-color: rgba(240,108,0,0.3);
+}
+
+<button
+  className="c0"
+>
+  Add to basket
+</button>
+`;
+
+exports[`Button - Small 1`] = `
+.c0 {
+  padding: 0.5rem 1rem;
+  color: white;
+  background: #F06C00;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  touch-action: manipulation;
+  min-height: 48px;
+  min-width: 48px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0.25rem 0.5rem;
+  font-size: small;
+}
+
+.c0:focus,
+.c0:hover {
+  background-color: #E55000;
+  cursor: pointer;
+}
+
+.c0:focus {
+  outline: 4px dashed #283044;
+}
+
+.c0:not(button) {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+<button
+  className="c0"
+>
+  Add to basket
+</button>
+`;
+
+exports[`Button 1`] = `
+.c0 {
+  padding: 0.5rem 1rem;
+  color: white;
+  background: #F06C00;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  touch-action: manipulation;
+  min-height: 48px;
+  min-width: 48px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c0:focus,
+.c0:hover {
+  background-color: #E55000;
+  cursor: pointer;
+}
+
+.c0:focus {
+  outline: 4px dashed #283044;
+}
+
+.c0:not(button) {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+<button
+  className="c0"
+>
+  Add to basket
+</button>
+`;
+
+exports[`Transparent Button 1`] = `
+.c0 {
+  padding: 0.5rem 1rem;
+  color: white;
+  background: #F06C00;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  touch-action: manipulation;
+  min-height: 48px;
+  min-width: 48px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c0:focus,
+.c0:hover {
+  background-color: #E55000;
+  cursor: pointer;
+}
+
+.c0:focus {
+  outline: 4px dashed #283044;
+}
+
+.c0:not(button) {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c1 {
+  background-color: transparent;
+}
+
+.c1:focus,
+.c1:hover {
+  background-color: rgba(240,108,0,0.3);
+}
+
+<button
+  className="c0 c1"
 >
   Add to basket
 </button>

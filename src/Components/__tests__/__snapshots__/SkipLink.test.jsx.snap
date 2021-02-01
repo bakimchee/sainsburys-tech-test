@@ -1,8 +1,30 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SkipLink 1`] = `
+.c0 {
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.c0:focus {
+  -webkit-clip: auto;
+  clip: auto;
+  height: auto;
+  overflow: auto;
+  position: absolute;
+  width: auto;
+  background-color: white;
+  border: 2px blue solid;
+  padding: 0.5rem;
+}
+
 <a
-  className="SkipLink__SkipLinkStyle-sc-1mjp9rk-0 fijpFE"
+  className="c0"
   href="#main"
 >
   Skip to main content
