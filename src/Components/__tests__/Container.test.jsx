@@ -7,4 +7,5 @@ test('Container', () => {
   const component = renderer.create(<Container>Content</Container>);
   const tree = component.toJSON();
   expect(tree).toMatchSnapshot();
+  expect(tree).toHaveStyleRule('max-width', '1024px');
 });

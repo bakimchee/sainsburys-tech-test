@@ -1,15 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`GridLayout 1`] = `
-.c0 {
-  display: block;
-  padding: 0 12px;
-  max-width: 1023px;
-  margin: 0 auto;
-}
-
+exports[`Grid 1`] = `
 @media (min-width:640px) {
-  .c1 {
+  .c0 {
     display: grid;
     grid-template-columns: repeat(4,1fr);
     grid-template-rows: repeat(2,1fr);
@@ -20,12 +13,7 @@ exports[`GridLayout 1`] = `
 
 <div
   className="c0"
-  id="main"
 >
-  <div
-    className="c1"
-  >
-    Component
-  </div>
+  Component
 </div>
 `;
