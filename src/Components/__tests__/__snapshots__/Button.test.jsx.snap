@@ -36,10 +36,6 @@ exports[`Button - Full Width 1`] = `
   cursor: pointer;
 }
 
-.c0:focus {
-  outline: 4px dashed #283044;
-}
-
 .c0:not(button) {
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -97,10 +93,6 @@ exports[`Button - Outline 1`] = `
 .c0:hover {
   background-color: #E55000;
   cursor: pointer;
-}
-
-.c0:focus {
-  outline: 4px dashed #283044;
 }
 
 .c0:not(button) {
@@ -166,10 +158,6 @@ exports[`Button - Small 1`] = `
   cursor: pointer;
 }
 
-.c0:focus {
-  outline: 4px dashed #283044;
-}
-
 .c0:not(button) {
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -226,10 +214,6 @@ exports[`Button 1`] = `
   cursor: pointer;
 }
 
-.c0:focus {
-  outline: 4px dashed #283044;
-}
-
 .c0:not(button) {
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -284,10 +268,6 @@ exports[`Transparent Button 1`] = `
 .c0:hover {
   background-color: #E55000;
   cursor: pointer;
-}
-
-.c0:focus {
-  outline: 4px dashed #283044;
 }
 
 .c0:not(button) {
