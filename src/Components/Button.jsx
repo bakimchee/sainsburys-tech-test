@@ -21,9 +21,6 @@ const Button = styled.button`
     background-color: ${staticTheme.color.palette.orangeDark};
     cursor: pointer;
   }
-  &:focus {
-    outline: 4px dashed ${staticTheme.color.palette.blue};
-  }
   // https://github.com/philipwalton/flexbugs#9-some-html-elements-cant-be-flex-containers
   &:not(button) {
     align-items: center;

@@ -53,6 +53,7 @@ body {
   background: ${({ theme }) => theme.background};
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
   "Roboto", "Oxygen", "Ubuntu", "Helvetica Neue", Arial, sans-serif;
+  transition: background-color 0.2s ease-in-out; 
 }
 
 /* Remove list styles on ul, ol elements with a class attribute */

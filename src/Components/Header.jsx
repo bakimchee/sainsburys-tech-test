@@ -43,6 +43,9 @@ const HeaderLogo = styled.div`
 const HeaderActions = styled.div`
   display: flex;
   flex-direction: column-reverse;
+  & button:last-of-type {
+    margin: 0.5rem 0;
+  }
 
   @media (min-width: ${staticTheme.breakpoints.medium.min}) {
     grid-area: 1 / 2 / 3 / 5;
@@ -50,6 +53,9 @@ const HeaderActions = styled.div`
     display: flex;
     justify-content: space-between;
     flex-direction: row;
+    & button:last-of-type {
+      margin: 0 0 0 0.5rem;
+    }
   }
 `;
 

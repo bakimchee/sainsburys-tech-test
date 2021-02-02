@@ -16,6 +16,7 @@ const Card = styled.div`
   display: flex;
   flex-direction: column;
   color: ${({ theme }) => theme.text};
+  transition: background-color 0.2s ease-in-out;
   @media (min-width: ${staticTheme.breakpoints.medium.min}) {
     margin-bottom: 0;
   }

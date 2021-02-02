@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 import { theme } from '../Theme';
 
-const Grid = styled.div`
+export const Grid = styled.div`
   @media (min-width: ${theme.breakpoints.medium.min}) {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -14,7 +14,7 @@ const Grid = styled.div`
   }
 `;
 
-const GridWrapper = styled.div`
+export const GridWrapper = styled.div`
   display: block;
   padding: 0 ${theme.size.spacing.large};
   max-width: ${theme.breakpoints.large.max};
