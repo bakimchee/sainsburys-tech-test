@@ -13,6 +13,7 @@ const CheckoutContainer = styled.div`
   bottom: 0;
   position: fixed;
   background-color: ${({ theme }) => theme.foreground};
+  color: ${({ theme }) => theme.text};
   z-index: 1;
   padding: 1rem;
   box-shadow: -4px 0 14px 1px rgba(0, 0, 0, 0.12);
