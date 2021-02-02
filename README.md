@@ -4,6 +4,16 @@ Technologies: React, Webpack, Babel, Jest, Styled Components, Git Hub Actions
 
 https://bakimchee.github.io/sainsburys-tech-test/
 
+###
+
+```js
+npm start
+```
+
+```js
+npm test
+```
+
 ## Sainsbury’s Tech Front End Exercise - Brief
 
 In this exercise you will develop a product listing page and shopping basket. Your solution should:
